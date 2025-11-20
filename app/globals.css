@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0b1220;
+  --foreground: #e6eefc;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  color: var(--foreground);
+  background: linear-gradient(150deg, #0b1220 0%, #0e1a33 60%, #0b1220 100%);
+}
+
+/* Basic RTL support tweaks */
+[dir="rtl"] .text-start { text-align: right; }
+[dir="rtl"] .text-end { text-align: left; }
+[dir="rtl"] .ml-auto { margin-left: 0; margin-right: auto; }
+[dir="rtl"] .mr-2 { margin-right: 0; margin-left: 0.5rem; }
+
+.container { @apply max-w-6xl mx-auto px-4; }
+.card { @apply bg-white/5 rounded-xl border border-white/10 shadow-xl backdrop-blur; }
+.card-header { @apply px-5 py-4 border-b border-white/10 font-semibold; }
+.card-body { @apply p-5; }
+.link { @apply text-brand-300 hover:text-brand-200 underline decoration-dashed; }
+.btn { @apply inline-flex items-center gap-2 rounded-lg px-4 py-2 font-medium bg-brand-600 hover:bg-brand-500 text-white; }
+.btn-secondary { @apply inline-flex items-center gap-2 rounded-lg px-4 py-2 font-medium bg-white/10 hover:bg-white/20 text-white; }
